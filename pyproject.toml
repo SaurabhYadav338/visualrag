@@ -1,0 +1,59 @@
+[project]
+name = "visualrag"
+version = "0.1.0.dev1"
+description = "Multimodal visual context extraction from screen shares, meeting recordings and real-world videos for Video RAG pipelines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Saurabh Yadav" }
+]
+keywords = [
+    "video-rag",
+    "multimodal-rag",
+    "rag",
+    "computer-vision",
+    "ocr",
+    "slides-extraction",
+    "meeting-recordings",
+    "keyframe-extraction",
+    "deictic-video-extraction",
+    "deictic"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = [
+    "av>=12.0.0",
+    "opencv-python-headless>=4.8.0",
+    "numpy>=1.24.0",
+    "Pillow>=10.0.0",
+    "imagehash>=4.3.0",
+    "pytesseract>=0.3.10",
+    "langchain-core>=0.3.0",
+    "pydantic>=2.0.0",
+    "spacy>=3.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "build>=1.0.0",
+    "twine>=5.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
